@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: foodtrucks-web
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: foodtrucks-web
+    spec:
+      containers:
+        - name: foodtrucks-web
+          image: bipinalchetti/foodtrucks-web
+          ports:
+            - containerPort: 5000
